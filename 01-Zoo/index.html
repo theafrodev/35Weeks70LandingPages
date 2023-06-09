@@ -4,10 +4,40 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="normalize.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@400;700;900&display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
 <body>
-    Hello world!
+    <div id="navbar">
+        <nav class="">
+            <a href="#" class="logo">
+               Zoo
+            </a>
+    
+            <ul id="topnav" class="topnav nav-links">
+                <li><a href="#">About</a></li>
+                <li><a href="#">Animals</a></li>
+                <li><a href="#">Donate</a></li>
+                <li><a href="#">Pricing</a></li>
+                <li><a href="#">Blog</a></li>
+            </ul>
+    
+            <button class="btn-outline">Contact</button>
+
+            <a href="javascript:void(0);" class="icon" onclick="toggleNav()">
+                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="0.5" y="0.5" width="47" height="47" rx="23.5" stroke="white" stroke-opacity="0.295743"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M16 17H32V19H16V17ZM16 23H32V25H16V23ZM32 29H16V31H32V29Z" fill="white"/>
+                </svg>
+            </a>
+                
+        </nav>
+    </div>
+    
+    <script src="scripts.js"></script>
 </body>
 </html>
