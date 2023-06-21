@@ -111,6 +111,7 @@ small, .text_small {font-size: 0.833rem;}
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
 }
 
 #navbar .logo{
@@ -149,7 +150,40 @@ small, .text_small {font-size: 0.833rem;}
   display: none;
 }
 
+/* Above the fold */
+
+.abovethefold{
+    background-image: url("pic.png");
+    height: 100vh;
+    max-height: 1000px;
+    background-size: 60% auto;
+    /* background-size: auto 90%; */
+    /* background-size: contain; */
+    background-repeat: no-repeat;
+    background-position: right 0;
+    display: flex;
+    align-items: center;
+}
+
+.abovethefold .wrapper{
+    padding-block: 100px;
+}
+
+.abovethefold .wrapper *{
+    max-width: 500px;
+    margin-left: 0;
+}
+
+.mobile-spacer{
+    display: none;
+}
+
+/* Mobile */
+
 @media screen and (max-width: 600px) {
+
+    /* Navigation */
+
     #navbar .btn-outline, #topnav{
         display: none;
     }
@@ -161,11 +195,12 @@ small, .text_small {font-size: 0.833rem;}
     #topnav.responsive{
         display: block;
         background-color: var(--secondary);
-        position: absolute;
+        position: fixed;
         width: 100%;
         left: 0;
         top: 85px;
         padding: 14px 0;
+        z-index: 999999;
     }
 
     #topnav.responsive li{
@@ -180,23 +215,33 @@ small, .text_small {font-size: 0.833rem;}
         width: 100%;
         padding: 14px 0;
     }
+
+    /* Above the fold */
+
+    .abovethefold{
+        background-image: url("pic.png");
+        background-size: auto 440px;
+        background-position: right 0;
+        display: block;
+    }
+
+    .title{
+        font-size: 3rem;
+        line-height: 3.3rem;
+    }
+
+    .mobile-spacer{
+        display: block;
+        width: 100%;
+        height: 300px;
+    }
 }
 
-/* Above the fold */
 
-.abovethefold{
-    background-image: url("pic.png");
-    min-height: 100vh;
-    background-size: 50% auto;
-    background-repeat: no-repeat;
-    background-position: right 0;
-    display: flex;
-    align-items: center;
+/* High Dp and Extra wide screens */
+
+@media screen and (min-width: 1440px) {
+    .abovethefold{
+        background-size: contain;
+    }
 }
-
-.abovethefold .wrapper *{
-    max-width: 500px;
-    margin-left: 0;
-}
-
-
