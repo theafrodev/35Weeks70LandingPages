@@ -106,13 +106,16 @@ small, .text_small {font-size: 0.833rem;}
 
 .card-box{
     display: flex;
+    flex-flow: row wrap;
     gap: 1.87rem;
+    justify-content: center;
 }
 
 .card{
     padding: 2.5rem;
     padding-bottom: 3rem;
     border-radius: 48px;
+    width: 23rem;
 }
 
 .card.active{
@@ -287,6 +290,7 @@ small, .text_small {font-size: 0.833rem;}
         background-size: auto 440px;
         background-position: right 0;
         display: block;
+        height: fit-content;
     }
 
     .title{
